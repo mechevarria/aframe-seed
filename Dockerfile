@@ -1,10 +1,13 @@
-FROM nginx
+FROM node:16
 
-COPY ./default.conf /etc/nginx/conf.d/
+WORKDIR /usr/src/app
 
-COPY ./docker-entrypoint.sh /usr/bin/
+COPY package*.json ./
 
-COPY ./dist /usr/share/nginx/html
+RUN npm install
 
-ENTRYPOINT [ "/usr/bin/docker-entrypoint.sh" ]
-CMD ["nginx", "-g", "daemon off;"]
+COPY . .
+
+EXPOSE 8080
+
+CMD [ "npm", "start" ]

@@ -27,6 +27,7 @@ cf-login.sh
 ```
 
 ### Docker
+>A private container repository is deployable on SAP BTP through the [Kyma runtime](https://blogs.sap.com/2021/02/01/setting-up-a-private-docker-registry-in-sap-cloud-platform-kyma-kubernetes/)
 
 >You can create a public registry with security scanning for free at [Quay.io](https://quay.io)
 
@@ -39,6 +40,12 @@ docker-build.sh
 ```bash
 docker-run.sh
 ```
+
+* Finally, you can deploy the built image to SAP BTP with the following script
+```bash
+cf-push-docker.sh
+```
+![docker](./img/docker.png)
 
 ### Buildpack
 

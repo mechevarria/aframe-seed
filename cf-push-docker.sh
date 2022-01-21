@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
-app=demo-nginx-vue
+app=aframe-seed-docker
 
 cf push $app \
     -m 64M \
-    -k 256M \
+    -k 1024M \
     --docker-image quay.io/mechevarria/$app \
     --no-start
-
-cf se $app KEYCLOAK_URL $KEYCLOAK_URL
-cf se $app KEYCLOAK false
 
 cf start $app
