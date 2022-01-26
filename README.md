@@ -6,6 +6,8 @@ Built with [A-Frame](https://aframe.io).
 
 To learn more about aframe, try out [A-Frame School](https://aframe.io/aframe-school/#/)
 
+![school](./img/school.png)
+
 ## Setup for local development
 
 ```sh
@@ -59,3 +61,15 @@ cf-push-buildpack.sh
 * The application will be packaged as a runtime container on the platform using the [nodejs buildpack](https://docs.cloudfoundry.org/buildpacks/node/index.html) and a route automatically generated
 
 ![buildpack](./img/buildpack.png)
+
+## Examples for further development
+
+### Augmented Reality
+
+* [AR.js](https://ar-js-org.github.io/AR.js-Docs/) is an addon library for AFrame that allows the creation of AR scenes
+
+![ar](./img/ar.png)
+
+### Vue integration
+
+* To create a more complex WebVR application, there are some questions and answers around integration of [Aframe and Vue.js](https://stackoverflow.com/questions/68349748/what-are-some-ways-to-use-aframe-with-vue)
